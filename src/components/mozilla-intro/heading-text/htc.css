@@ -1,0 +1,11 @@
+.head-component {
+    color: #000;
+    font-weight: 700;
+    font-size: 48px;
+    margin: 0 0 0.5em;
+    line-height: 1.05;
+}
+
+.h3-component {
+    margin-bottom: 12px;
+}

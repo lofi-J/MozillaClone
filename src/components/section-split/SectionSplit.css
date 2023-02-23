@@ -1,0 +1,49 @@
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 64px 80px 64px 80px;
+}
+
+.title-and-download {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+    box-sizing: border-box;
+    padding-left: 64px;
+}
+
+.iphone-container {
+    width: 600px;
+    box-sizing: border-box;
+}
+
+.iphone-img {
+    max-width: 100%;
+}
+
+.section-title {
+    max-width: 540px;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #271948;    
+    margin-bottom: 16.5px;
+}
+
+/* button */
+.blue-button {
+    color: white;
+    background-color: #0060df;
+    cursor: pointer;
+    line-height: 1.5;
+    font-size: 16px;
+    padding: 10px 24px;
+    border: 2px solid white;
+    border-radius: 4px;
+    box-sizing: border-box;
+    max-width: 182px;
+}
+.blue-button:hover {
+    background-color: #0250bb;
+}

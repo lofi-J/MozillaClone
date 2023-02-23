@@ -1,0 +1,52 @@
+
+#logo {
+    width: 112px;
+    height: 32px;
+    margin: 16px 25px 16px 0px;
+}
+
+.header-navigation {
+    padding: 0px 96px;
+    box-shadow: 0 0 1px 1px rgb(29 17 51 / 4%), 0 0 3px 2px rgb(9 32 77 / 12%), 0 0 2px -3px rgb(29 17 51 / 12%);
+    position: relative;
+}
+
+.header-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-navigation .header-container {
+    margin: 0 auto;
+}
+
+.header-content {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 16px 0;
+}
+
+.header-download-button {
+    position: absolute;
+    right: 0px;
+    background-color: white;
+    border: 2px solid #0060df;
+    border-radius: 4px;
+    color: #0060df;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 6px 24px 6px 24px;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-decoration: none;
+}
+.header-download-button:hover {
+    background-color: #0250bb;
+    border-color: white;
+    box-shadow: none;
+    color: white;
+}
+
+
