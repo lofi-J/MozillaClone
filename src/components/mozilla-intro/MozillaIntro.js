@@ -6,8 +6,16 @@ import note from "../../images/note-img.png";
 import people from "../../images/people-img.png";
 import tube from "../../images/tube-img.png";
 import peoples from "../../images/peoples.png";
+import footerLogo from "../../images/footer-logo.png";
 import { useState } from "react";
 import InputDetail from "./input-form/InputDetail";
+import FooterList from "./FooterList";
+// fontawesome
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTiktok, faMastodon, faSpotify, faTwitter, faInstagram, faLinkedin, faYoutube } from "@fortawesome/free-brands-svg-icons";
+
+
+
 
 function MozillaIntro() {
     const [isFocus, setIsFocus] = useState(false);
@@ -16,7 +24,37 @@ function MozillaIntro() {
         setIsFocus(true);
     }
 
+    //list
+    const company = ['Mozilla 선언문', '보도자료', '기업 블로그', '채용 정보', '연락처', '기부'];
+    const data = ['프라이버시 허브', '브라우저 비교', '브랜드 가이드'];
+    const help = ['제품 도움말', '버그 신고'];
+    const dev = ['Developer Edition', 'Beta', 'Android 용 Beta', 'Nightly', '기업용', '도구'];
+    const companyObj = {
+        className: 'company',
+        name: '회사',
+        arr: company
+    }
+    const dataObj = {
+        className: 'data',
+        name: '자료',
+        arr: data
+    }
+    const helpObj = {
+        className: 'help',
+        name: '도움말',
+        arr: help
+    }
+    const devObj = {
+        className: 'dev',
+        name: '개발자',
+        arr: dev
+    }
+    const list = [companyObj, dataObj, helpObj, devObj];
+
+
+
     return (
+    <div>
         <div className="wrap-mozilla-info">
 
             {/* dino */}
@@ -33,7 +71,7 @@ function MozillaIntro() {
                     </div>
                 </section>
             </div>
-
+            
 
             {/* ul and paragraph */}
             <div className="show-info">
@@ -105,8 +143,8 @@ function MozillaIntro() {
                 <div className="newsletter-right-side">
                 <HeadTextComponent className="newletterh3" type="h3" size="48" text="Firefox뉴스레터" />
                     <fieldset>
-                        <label className="label-email">이메일 주소:</label>
-                        <input onClick={onClickMethod} className="input-email" type="email" name="email" required placeholder="yourname@example.com" />
+                        <label className="input-label">이메일 주소:</label>
+                        <input onClick={onClickMethod} className="input-data" type="email" name="email" required placeholder="yourname@example.com" />
 
                         {
                             isFocus ? <InputDetail /> : undefined
@@ -122,6 +160,81 @@ function MozillaIntro() {
             </div>
 
         </div>
+        {/* footer */}
+        <footer className="footer">
+            <div className="footer-wrap">
+                <div className="footer-top"> 
+                    <div className="footer-logo-wrap"> {/* logo */}
+                        <img src={footerLogo} alt="footer-logo.img" />
+                    </div>
+
+                    <div className="footer-content-wrap">   {/* content */}
+                        <div className="footer-content-list">
+                        {
+                            list.map(item => {
+                                return (
+                                    <FooterList key={item.name} list={item} />
+                                );
+                            })
+                        }
+                            <div id="footer-content-last-child" className="footer-list-wrap footer-content-sns">
+                                <div className="footer-content-sns-mozilla">
+                                    
+                                    <h5>@Mozilla 팔로우</h5>
+                                    <div className="sns-wrap">
+                                        <FontAwesomeIcon className="sns-icon" icon={faTwitter} />
+                                        <FontAwesomeIcon className="sns-icon" icon={faMastodon} />
+                                        <FontAwesomeIcon className="sns-icon" icon={faInstagram} />
+                                        <FontAwesomeIcon className="sns-icon" icon={faLinkedin} />
+                                        <FontAwesomeIcon className="sns-icon" icon={faTiktok} />
+                                        <FontAwesomeIcon className="sns-icon" icon={faSpotify} />
+                                    </div>
+                                    
+                                </div>    
+
+                                <div className="footer-content-sns-firefox">
+                                    
+                                    <h5>@Firefox 팔로우</h5>
+                                    <div className="sns-wrap">
+                                        <FontAwesomeIcon className="sns-icon" icon={faTwitter} />
+                                        <FontAwesomeIcon className="sns-icon" icon={faInstagram} />
+                                        <FontAwesomeIcon className="sns-icon" icon={faYoutube} />
+                                    </div>                            
+                                    
+                                </div>
+                            </div>            
+                        </div>                                
+                    </div>
+                </div>
+                             
+                        
+                <div className="footer-bottom"> 
+                    <div className="footer-bottom-left">
+                        <ul className="footer-term">
+                            <li>웹 사이트 개인정보처리방침</li>
+                            <li>쿠키</li>
+                            <li>법적 고지</li>
+                            <li>커뮤니티 참여 가이드라인</li>
+                            <li>이 사이트 정보</li>
+                        </ul>
+                        <pre className="footer-pre">
+                        <b>Mozilla Corporation</b>를 운영하는 비영리 재단인 <b>Mozilla Foundation</b>을 방문하세요.<br />
+                        본 웹 페이지는 Mozilla 웹 사이트의 클론 사이트입니다. 
+                        </pre>
+                    </div>
+                    
+                    <div className="footer-bottom-right">
+                        <form className="footer-form">
+                            <label htmlFor="page-lang">언어</label>
+                            <select id="page-lang" name="lang">
+                                <option>한국어</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
     );
 }
 

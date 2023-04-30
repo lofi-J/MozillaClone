@@ -1,11 +1,26 @@
-.input-form-container {
-    display: flex;
-    flex-direction: column;
+.fieldset {
+    margin-bottom: 20px;
 }
 
-.country-label {
-    
+.b {
+    font-size: 14px;
+    font-weight: bold;
+    padding-right: 8px;
 }
-#id_country {
 
+.checkbox01 {
+    margin: 3px;
+}
+
+.privacy-wrap {
+    display: inline;
+    font-size: 14px;
+    font-weight: 700;
+    padding-right: 8px;
+    line-height: 1.5;
+}
+
+.a-link {
+    color: #0060df;
+    text-decoration: underline;
 }
