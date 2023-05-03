@@ -219,7 +219,7 @@ function MozillaIntro() {
                         </ul>
                         <pre className="footer-pre">
                         <b>Mozilla Corporation</b>를 운영하는 비영리 재단인 <b>Mozilla Foundation</b>을 방문하세요.<br />
-                        본 웹 페이지는 Mozilla 웹 사이트의 클론 사이트입니다. 
+                        <p className="copyright">본 웹 페이지는 Mozilla 웹 사이트의 클론 사이트임을 알리며 단순 css 숙련의 목적으로 작성된 페이지입니다.</p>
                         </pre>
                     </div>
                     
